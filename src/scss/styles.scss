@@ -1,0 +1,113 @@
+// Import all of Bootstrap's CSS
+
+@import "/Users/luisn1/Desktop/Webs/Responsive_web/my-project/node_modules/bootstrap/scss/bootstrap.scss";
+.logo {
+	width: auto;
+	max-height: 4rem;
+	padding: 1 1 1 1;
+	position: fixed;
+  }
+.navbar-brand {
+	height: 5rem;
+}
+.welcome {
+	margin-top: 6rem;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.billetes {
+	background-color: #007382;	
+	align-items: center; /*depende de la imagen*/
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	object-position: center;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+a {
+	color: black;
+}
+
+
+footer a {
+	background-color: $warning;
+}
+
+footer p {
+	font-size: smaller;
+}
+.oferta {
+	width: 30%;
+	height: auto;
+	
+	border-radius: 2.5rem;
+
+	position: fixed;
+	top: 6rem;
+	right: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	animation: oferta 1s 3s forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+.oferta p {
+	font-size: x-small;
+	margin: 0;
+}
+.contenido {
+	margin: auto;
+	background: #009688;
+	border-radius: 2.5rem;
+	display: flex;
+	opacity: .7;
+	animation: contenido 2s 3s infinite;
+}
+@keyframes oferta {
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+@keyframes contenido {
+	25% {
+		background-color: #ffc107;
+	}
+	75% {
+		background-color: #009688;
+	}
+}	
+#cerrar {
+	display: none;
+}
+#cerrar + label {
+	position: fixed;
+	color: #ffffff;
+	font-size: 1rem;
+	top: 6.8rem;
+	text-align: center;
+	z-index: 5;
+	background: darkred;
+	width: 2rem;
+	height: 2rem;
+	line-height: 2rem;
+	border-radius: 50%;
+	right: 0;
+	cursor: pointer;
+
+	animation: oferta 1s 3S forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#cerrar:checked + label, #cerrar:checked ~ .oferta {
+	display: none;
+} 
