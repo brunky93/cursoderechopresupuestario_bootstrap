@@ -4609,6 +4609,7 @@ fieldset:disabled .btn {
 
 .navbar-nav .dropdown-menu {
   position: static;
+  font-size: small;
 }
 
 .navbar-text {
