@@ -6,14 +6,13 @@ subprocess.check_call(['pip', 'install', 'pyperclip'])
 
 import os
 from bs4 import BeautifulSoup
-import pyperclip
 
 # Directorio donde se encuentran los archivos HTML
 # Directorio actual donde se encuentra el script
 directorio_script = os.path.dirname(os.path.abspath(__file__))
 
-# Solicitar la URL nueva desde el portapapeles
-url_nueva = pyperclip.paste()
+# Solicitar la URL nueva al usuario
+url_nueva = input("Por favor, ingresa la nueva URL y presiona Enter: ")
 
 # Función para actualizar los enlaces en un archivo HTML
 def actualizar_enlace_en_html(html_file, url_nueva):
@@ -36,4 +35,4 @@ for root, dirs, files in os.walk(directorio_script):
             archivo_html = os.path.join(root, archivo)
             actualizar_enlace_en_html(archivo_html, url_nueva)
 
-print("Enlaces actualizados en todos los archivos HTML con la URL nueva del portapapeles.")
+print("Enlaces actualizados en todos los archivos HTML con la URL nueva ingresada.")
