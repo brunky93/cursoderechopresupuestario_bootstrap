@@ -45,7 +45,7 @@ def main():
 
     # Realiza un push de los cambios a la rama Script-externo
     origin = repo.remote('origin')
-    origin.push('master:Script-externo')
+    origin.push('main:Script-externo')
 
     print("Enlaces actualizados en todos los archivos HTML con la URL nueva proporcionada y los cambios se han sincronizado en la rama Script-externo.")
 
