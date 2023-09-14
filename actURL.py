@@ -1,14 +1,7 @@
-import subprocess
-# Llamada al comando pip para instalar la librería beautifulsoup4
-subprocess.check_call(['pip', 'install', 'beautifulsoup4'])
-# Llamada al comando pip para instalar la librería pyperclip
-subprocess.check_call(['pip', 'install', 'pyperclip'])
-# Llamada al comando pip para instalar la librería argparse
-subprocess.check_call(['pip', 'install', 'argparse'])
-
 import os
 import argparse
 from bs4 import BeautifulSoup
+from git import Repo  # Importa la biblioteca GitPython
 
 # Directorio donde se encuentran los archivos HTML
 # Directorio actual donde se encuentra el script
@@ -33,13 +26,28 @@ def main():
     args = parser.parse_args()
     url_nueva = args.url_nueva
 
+    # Actualiza los enlaces en los archivos HTML
     for root, dirs, files in os.walk(directorio_script):
         for archivo in files:
             if archivo.endswith('.html'):
                 archivo_html = os.path.join(root, archivo)
                 actualizar_enlace_en_html(archivo_html, url_nueva)
 
-    print("Enlaces actualizados en todos los archivos HTML con la URL nueva proporcionada.")
+    # Inicializa el repositorio Git
+    repo = Repo.init(directorio_script)
+
+    # Agrega todos los cambios al índice
+    repo.git.add(all=True)
+
+    # Realiza un commit con un mensaje
+    commit_message = f"Actualización de enlaces con la URL: {url_nueva}"
+    repo.index.commit(commit_message)
+
+    # Realiza un push de los cambios a la rama Script-externo
+    origin = repo.remote('origin')
+    origin.push('master:Script-externo')
+
+    print("Enlaces actualizados en todos los archivos HTML con la URL nueva proporcionada y los cambios se han sincronizado en la rama Script-externo.")
 
 if __name__ == '__main__':
     main()
