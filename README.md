@@ -22,7 +22,7 @@ If you'd like to work with the code, follow these steps:
 1. **Clone the Repository:** Use the following command to clone this repository to your local machine:
 
    ```
-   git clone https://github.com/your-username/budget-law-web.git
+   git clone https://github.com/brunky93/cursoderechopresupuestario_bootstrap
    ```
 
 2. **Explore the Code:** You can open the project in your preferred code editor to examine, modify, or enhance it.
@@ -37,7 +37,7 @@ This project is open-source and available under the [MIT License](LICENSE). Feel
 
 ## Contact
 
-For any inquiries or further information about this project, please contact the project owner: [Your Name](mailto:your.email@example.com).
+For any inquiries or further information about this project, please contact the project owner: [Luis Navarro](mailto:brunky93@gmail.com).
 
 ---
 
