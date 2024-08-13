@@ -129,52 +129,65 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.725rem + 2vw); /* Aumenta el tamaño para que sea más destacado */
+  font-weight: 700; /* Mayor grosor para mayor énfasis */
+  line-height: 1.2;
 }
 
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+      font-size: 3.5rem; /* Más grande en pantallas grandes */
   }
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.375rem + 1.5vw); /* Toma el tamaño de los antiguos h1 */
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2rem;
+      font-size: 2.5rem; /* Tamaño ajustado para pantallas grandes */
   }
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.325rem + 0.9vw); /* Tamaño de los antiguos h2 */
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.75rem;
+      font-size: 2rem; /* Ajuste para pantallas grandes */
   }
 }
 
 h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.275rem + 0.6vw); /* Tamaño de los antiguos h3 */
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 @media (min-width: 1200px) {
   h4, .h4 {
-    font-size: 1.5rem;
+      font-size: 1.75rem; /* Ajuste para pantallas grandes */
   }
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: calc(1.225rem + 0.3vw); /* Tamaño de los antiguos h4 */
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.25rem; /* Tamaño ajustado para ser más prominente que el párrafo normal */
+  font-weight: 400;
+  line-height: 1.7;
 }
+
 
 p {
   margin-top: 0;
