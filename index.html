@@ -2,40 +2,66 @@
 
 <html lang="es">
 <head>
+    <!-- Especifica el conjunto de caracteres utilizado, en este caso UTF-8, para admitir todos los caracteres -->
     <meta charset="utf-8"/>
+    
+    <!-- Configura la ventana gráfica para dispositivos móviles, asegurando que el sitio sea responsivo -->
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    
+    <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Inicio - Curso de Derecho Presupuestario | Preparación para Oposiciones</title>
+    
+    <!-- Meta descripción que aparece en los resultados de búsqueda, describiendo el contenido de la página -->
     <meta name="description" content="Curso de Derecho Presupuestario orientado a oposiciones. Aprende con materiales didácticos, vídeos ejemplos y contacto directo con el profesor.">
+    
+    <!-- Enlace a la hoja de estilos de Bootstrap para diseño y estructura del sitio -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" rel="stylesheet"/>
+    
+    <!-- Enlace a una hoja de estilos personalizada para estilos adicionales específicos del sitio -->
     <link href="/src/scss/styles.css" rel="stylesheet"/>
 </head>
+
+<!-- Comienza el cuerpo del documento con una clase para definir el fondo principal -->
 <body class="bg-principal">
+
+<!-- Contenedor principal de la oferta -->
 <div>
-    <input id="cerrar" type="checkbox"/>
-    <label for="cerrar" id="btn-cerrar">X</label>
+    <input id="cerrar" type="checkbox"/> <!-- Checkbox para controlar la visibilidad del contenedor -->
+    <label for="cerrar" id="btn-cerrar">X</label> <!-- Botón para cerrar la oferta -->
     <div class="oferta">
         <div class="contenido card">
             <div class="card-body">
+                <!-- Enlace a la oferta con descuento -->
                 <p><a href="https://www.udemy.com/course/derecho-presupuestario-orientado-a-oposiciones/?couponCode=3C71486D0580244FF71D" target="_blank">Inscríbete ahora con un descuento del 65% ¡oferta por tiempo limitado!</a></p>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Barra de navegación superior -->
 <nav class="navbar navbar-expand-md navbar-dark bg-principal fixed-top">
     <div class="container-fluid">
+        <!-- Enlace al inicio de la página con el logo -->
         <a class="navbar-brand" href="index.html">
             <img alt="logo" class="img-fluid d-inline-block align-text-top logo" src="img/logo.jpg"/>
         </a>
+        
+        <!-- Botón para mostrar la barra de navegación en dispositivos móviles -->
         <button aria-controls="offcanvasDarkNavbar" class="navbar-toggler" data-bs-target="#offcanvasDarkNavbar" data-bs-toggle="offcanvas" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
+        <!-- Menú de navegación colapsable -->
         <div aria-labelledby="offcanvasDarkNavbarLabel" class="offcanvas offcanvas-end text-bg-dirigido" id="offcanvasDarkNavbar" tabindex="-1">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sitios</h5>
-                <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" type="button"></button>
+                
+                <!-- Botón para cerrar el menú en dispositivos móviles -->
+                <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" type="button"></button> 
             </div>
             <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <!-- Lista de navegación -->
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3"> 
                     <li class="nav-item">
                         <a aria-current="page" class="nav-link active" href="index.html">Inicio</a>
                     </li>
@@ -45,10 +71,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="material.html">Material didáctico</a>
                     </li>
+                    <!-- Menú desplegable con opciones adicionales -->
                     <li class="nav-item dropdown">
                         <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
                             Preparación de supuestos prácticos
                         </a>
+                        <!-- Submenú desplegable con enlaces a diferentes secciones -->
                         <ul class="dropdown-menu bg-info">
                             <li><a class="dropdown-item text-wrap" href="libro0.html">Entender la vinculación y transferencias de crédito</a></li>
                             <li><a class="dropdown-item text-wrap" href="libro1.html">Presupuesto, Aprobación y Estructura.</a></li>
@@ -71,29 +99,37 @@
         </div>
     </div>
 </nav>
+
+<!-- Contenedor principal para el contenido de la página -->
 <div class="container-md bg-principal">
+    <!-- Sección de bienvenida con el título principal de la página -->
     <section class="welcome bg-bienvenida">
         <div class="container-fluid">
             <div class="row row-cols-1">
                 <div class="col">
-                    <h1 class="text-white">Curso de Derecho Presupuestario para Oposiciones</h1>
+                    <h1 class="text-white">Curso de Derecho Presupuestario para Oposiciones</h1> <!-- Encabezado principal -->
                     <br/>
                 </div>
                 <div class="col">
-                    <h2 class="text-white">Orientado a opositores de la Administración del Estado</h2>
+                    <h2 class="text-white">Orientado a opositores de la Administración del Estado</h2> <!-- Subtítulo -->
                     <br/>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Sección con una imagen de billetes -->
     <section>
         <div class="billetes">
             <img alt="billetes" class="img-fluid" src="img/billetesmesa.jpg"/>
         </div>
     </section>
+
+    <!-- Sección con información sobre a quién está dirigido el curso -->
     <section class="container-fluid bg-dirigido">
         <div class="col align-items-center clearfix">
             <div class="col d-none d-lg-block">
+                <!-- Imagen en pantallas grandes -->
                 <img alt="estudiar" class="col-md-5 float-md-end mb-2 ms-md-2" src="img/estudiar.jpg"/>
             </div>
             <div class="col">
@@ -112,6 +148,7 @@
                     Tanto si te estás preparando por tu cuenta como si asistes a clases presenciales, dispondrás de un valioso material complementario para comprender mejor los temas de gestión financiera.<br/>
                 <br/>
                 </p>
+                <!-- Mensajes adicionales sobre la preparación personalizada y libros -->
                 <p class="text-end lh-sm text-warning">Como complemento al curso online, se prepara el segundo ejercicio de gestión financiera de los exámenes de gestión de promoción interna. Preparación personalizada de supuestos por correo electrónico. Pide más información <a class="resaltado" href="contacto.html">aquí</a></p> 
                 <br/>
                 <p class="text-end lh-sm text-warning">Si lo que quieres es reforzar los supuestos prácticos de Gestión del Estado, se ofrecen una serie de libros en formato digital con ejercicios resueltos. Puedes verlos <a class="resaltado" href="material.html">aquí</a></p>
@@ -119,16 +156,20 @@
                 <br/>
             </div>
             <div class="col d-lg-none">
+                <!-- Imagen alternativa para pantallas pequeñas en lugar de la imagen grande -->
                 <img alt="estudiar" class="img-fluid" src="img/estudiar.jpg"/>
             </div>
         </div>
     </section>
+
+    <!-- Sección sobre el objetivo del curso -->
     <section class="container-fluid bg-objetivo">
         <div class="row align-items-center">
             <div class="col">
                 <h2 class="objetivotitulo text-center">Objetivo del Curso</h2>
             </div>
             <div class="col col-4 d-none d-lg-block">
+                <!-- Imagen en pantallas grandes -->
                 <img alt="competencias" class="img-fluid" src="img/competencias_aprobacion.png"/>
             </div>
             <div class="col">
@@ -136,6 +177,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Sección sobre quién imparte el curso -->
     <section class="container-fluid bg-profesor">
         <div class="row align-items-center">
             <div class="col">
@@ -143,16 +186,20 @@
                 <h2 class="text-white">¿Quién lo imparte?</h2>
                 <p class="text-white">Bartolomé Navarro</p><br/>
                 <p class="text-white">Profesional de la Administración General del Estado (Ministerio de Defensa). Formación en ciencias de la Administración. Amplia experiencia docente.</p><br/>
+                <!-- Botón con enlace a LinkedIn -->
                 <div class="d-grid gap-2 mx-auto">
                     <button class="btn btn-warning btn-lg text-nowrap" name="button" type="button"><a href="https://es.linkedin.com/in/bartolome-navarro-mendez-724581182" target="_blank">Ver en Linkedin</a></button>
                 </div>
                 <br/>
             </div>
             <div class="col d-none d-lg-block">
+                <!-- Imagen en pantallas grandes -->
                 <img alt="profesor" class="img-fluid" src="img/profesor.jpg"/>
             </div>
         </div>
     </section>
+
+    <!-- Sección con una cita de un alumno -->
     <section class="container-fluid bg-cita">
         <figure class="text-center">
             <blockquote class="blockquote">
@@ -163,6 +210,8 @@
             </figcaption>
         </figure>
     </section>
+
+    <!-- Sección sobre qué se estudiará en el curso -->
     <section class="container-fluid bg-temario">
         <div class="row">
             <div class="col align-self-center">
@@ -170,19 +219,24 @@
                 <p class="text-white lh-sm">Conocerás las diversas estructuras que presentan los créditos de los estados de gastos e ingresos de los Presupuestos Generales del Estado. Serás capaz de ubicar perfectamente los conceptos de la gestión financiera,
                     dentro de la amplia y dispersa normativa presupuestaria. Dominarás y entenderás todos los conceptos y terminología relacionados con el ciclo presupuestario, desde su elaboración y aprobación hasta su ejecución, modificaciones y control.</p>
                 <br/>
+                <!-- Botón con enlace al temario -->
                 <div class="d-grid gap-2 mx-auto">
                     <button class="btn btn-warning btn-lg text-nowrap" name="button" type="button"><a href="https://www.udemy.com/course/derecho-presupuestario-orientado-a-oposiciones/?couponCode=0BC2923539CEE45273F3" target="_blank">Ver temario (Cupón oferta)</a></button>
                 </div>
                 <br/>
             </div>
+            <!-- Imagen en pantallas grandes -->
             <div class="col order-first d-none d-lg-block">
                 <a href="img/esquema.png"><img alt="esquema" class="img-fluid" src="img/esquema.png"/></a>
             </div>
+            <!-- Imagen alternativa para pantallas pequeñas -->
             <div class="row d-lg-none text-center">
                 <a href="img/esquema.png"><img alt="esquema" class="img-fluid" src="img/esquema.png"/></a>
             </div>
         </div>
     </section>
+
+    <!-- Sección sobre dónde se desarrolla el curso -->
     <section class="container-fluid bg-objetivo">
         <div class="row">
             <div class="col align-self-center">
@@ -194,6 +248,7 @@
             </div>
             <div class="container-fluid row align-self-center">
                 <div class="col col-4">
+                    <!-- Imágenes adicionales relacionadas con el curso -->
                     <a href="img/aprobacion_consejo"><img alt="consejo" class="img-fluid" src="img/aprobacion_consejo.png"/></a>
                 </div>
                 <div class="col col-4">
@@ -205,6 +260,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Sección sobre los requisitos para tomar el curso -->
     <section class="container-fluid bg-dirigido">
         <div class="col">
             <div class="col">
@@ -218,12 +275,15 @@
                     <br/>
                 </p>
             </div>
+            <!-- Imagen sobre los requisitos en la parte inferior -->
             <div class="text-center">
                 <img alt="requisitos" class="rounded img-fluid col-lg-4 col-sm-8" src="img/requisitos.jpg"/>
             </div>
         </div>
     </section>
 </div>
+
+<!-- Pie de página con un enlace de contacto y enlaces a redes sociales -->
 <section class="container-fluid bg-principal">
     <footer class="text-center">
         <div class="text-center">
@@ -232,6 +292,7 @@
         </div>
         <div class="row">
             <div class="col">
+                <!-- Enlace a la página de Facebook del curso -->
                 <a href="https://cutt.ly/vfIKXeu" target="_blank"><svg class="bi bi-facebook text-primary bg-principal" fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
                 </svg></a>

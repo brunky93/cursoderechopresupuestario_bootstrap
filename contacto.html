@@ -2,29 +2,52 @@
 
 <html lang="es">
 <head>
+    <!-- Especifica el conjunto de caracteres utilizado, en este caso UTF-8, para admitir todos los caracteres -->
     <meta charset="utf-8"/>
+    
+    <!-- Configura la ventana gráfica para dispositivos móviles, asegurando que el sitio sea responsivo -->
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    
+    <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Contacto - Curso de Derecho Presupuestario | Consultas y Ayuda</title>
+    
+    <!-- Meta descripción que aparece en los resultados de búsqueda, describiendo el contenido de la página -->
     <meta name="description" content="Contacto directo para consultas sobre el curso de Derecho Presupuestario. Resuelve tus dudas y accede a información adicional.">
+    
+    <!-- Enlace a la hoja de estilos de Bootstrap para diseño y estructura del sitio -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" rel="stylesheet"/>
+    
+    <!-- Enlace a una hoja de estilos personalizada para estilos adicionales específicos del sitio -->
     <link href="/src/scss/styles.css" rel="stylesheet"/>
 </head>
+
+<!-- Comienza el cuerpo del documento con una clase para definir el fondo principal -->
 <body class="bg-principal">
+
+<!-- Barra de navegación superior -->
 <nav class="navbar navbar-expand-md navbar-dark bg-principal fixed-top">
     <div class="container-fluid">
+        <!-- Enlace al inicio de la página con el logo -->
         <a class="navbar-brand" href="index.html">
             <img alt="logo" class="img-fluid d-inline-block align-text-top logo" src="img/logo.jpg"/>
         </a>
+        
+        <!-- Botón para mostrar la barra de navegación en dispositivos móviles -->
         <button aria-controls="offcanvasDarkNavbar" class="navbar-toggler" data-bs-target="#offcanvasDarkNavbar" data-bs-toggle="offcanvas" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
+        <!-- Menú de navegación colapsable -->
         <div aria-labelledby="offcanvasDarkNavbarLabel" class="offcanvas offcanvas-end text-bg-dirigido" id="offcanvasDarkNavbar" tabindex="-1">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sitios</h5>
-                <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" type="button"></button>
+                
+                <!-- Botón para cerrar el menú en dispositivos móviles -->
+                <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" type="button"></button> 
             </div>
             <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <!-- Lista de navegación -->
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3"> 
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Inicio</a>
                     </li>
@@ -34,10 +57,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="material.html">Material didáctico</a>
                     </li>
+                    <!-- Menú desplegable con opciones adicionales -->
                     <li class="nav-item dropdown">
                         <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
                             Preparación de supuestos prácticos
                         </a>
+                        <!-- Submenú desplegable con enlaces a diferentes secciones -->
                         <ul class="dropdown-menu bg-info">
                             <li><a class="dropdown-item text-wrap" href="libro0.html">Entender la vinculación y transferencias de crédito</a></li>
                             <li><a class="dropdown-item text-wrap" href="libro1.html">Presupuesto, Aprobación y Estructura.</a></li>
@@ -53,6 +78,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
+                        <!-- Enlace activo a la página de contacto -->
                         <a aria-current="page" class="nav-link active" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
@@ -60,79 +86,88 @@
         </div>
     </div>
 </nav>
+
+<!-- Contenedor principal para el contenido de la página -->
 <div class="container-md bg-principal">
+    <!-- Sección de bienvenida con el título principal de la página -->
     <section class="welcome bg-contacto">
         <div class="container-fluid">
             <br/>
-            <h1 class="text-white">Contacto</h1>
+            <h1 class="text-white">Contacto</h1> <!-- Encabezado principal -->
             <br/>
-            <h2 class="text-white">Estamos aquí para ayudarte</h2>
+            <h2 class="text-white">Estoy aquí para ayudarte</h2> <!-- Subtítulo -->
             <br/>
         </div>
     </section>
+
+    <!-- Sección de contacto con una imagen y un mensaje -->
     <section class="container-fluid bg-dirigido">
         <div class="row align-items-center">
+            <!-- Columna que contiene una imagen en pantallas grandes -->
             <div class="col d-none d-lg-block">
                 <img alt="contacto" class="img-fluid" src="img/contacto.jpg"/>
             </div>
+            <!-- Columna con un mensaje de bienvenida y descripción de la página de contacto -->
             <div class="col">
                 <br/>
                 <h3 class="text-white">¿Tienes alguna duda?</h3>
                 <p class="text-white lh-sm">
-                    No dudes en contactarnos para resolver cualquier duda o consulta que puedas tener sobre el curso de Derecho Presupuestario. Estamos aquí para ayudarte en todo lo que necesites para tu preparación.
+                    No dudes en contactar conmigo para resolver cualquier duda o consulta que puedas tener sobre el curso de Derecho Presupuestario. Estoy aquí para ayudarte en todo lo que necesites para tu preparación.
                 </p>
                 <br/>
             </div>
+            <!-- Imagen alternativa para pantallas pequeñas en lugar de la imagen grande -->
             <div class="col d-lg-none">
                 <img alt="contacto" class="img-fluid" src="img/contacto.jpg"/>
             </div>
         </div>
     </section>
+
+    <!-- Sección con un formulario de contacto -->
     <section class="container-fluid bg-profesor">
         <div class="row align-items-center">
             <div class="col">
                 <h3 class="text-white">Formulario de contacto</h3>
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label text-white" for="nombre">Nombre</label>
-                        <input class="form-control" id="nombre" type="text"/>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label text-white" for="email">Correo electrónico</label>
-                        <input class="form-control" id="email" type="email"/>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label text-white" for="mensaje">Mensaje</label>
-                        <textarea class="form-control" id="mensaje" rows="3"></textarea>
-                    </div>
-                    <button class="btn btn-warning" type="submit">Enviar</button>
-                </form>
+                <!-- Código embebido para un formulario de JotForm -->
+                <script src="https://form.jotform.com/jsform/203105495350044" type="text/javascript"></script>
+                <!-- Script adicional para navegación de errores del formulario -->
+                <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.22161"></script>
                 <br/>
             </div>
         </div>
     </section>
 </div>
+
+<!-- Pie de página con un enlace de contacto y enlaces a redes sociales -->
 <section class="container-fluid bg-principal">
     <footer class="text-center">
         <div class="text-center">
-            <h3 class="text-white">También puedes contactarnos a través de nuestras redes sociales</h3>
+            <h3 class="text-white">También puedes contactar a través de nuestras redes sociales</h3>
             <p><a href="mailto:consultas@derechopresupuestario.es" target="_blank">consultas@derechopresupuestario.es</a></p>
         </div>
         <div class="row">
             <div class="col">
-                <a href="https://cutt.ly/vfIKXeu" target="_blank"><svg class="bi bi-facebook text-primary bg-principal" fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
-                </svg></a>
-                <a href="https://cutt.ly/7fIKZTB" target="_blank"><svg class="bi bi-youtube text-danger bg-principal" fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
-                </svg></a>
+                <!-- Enlace a la página de Facebook del curso -->
+                <a href="https://cutt.ly/vfIKXeu" target="_blank">
+                    <svg class="bi bi-facebook text-primary bg-principal" fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                    </svg>
+                </a>
+                <!-- Enlace a la página de YouTube del curso -->
+                <a href="https://cutt.ly/7fIKZTB" target="_blank">
+                    <svg class="bi bi-youtube text-danger bg-principal" fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+                    </svg>
+                </a>
             </div>
             <br/>
         </div>
     </footer>
 </section>
+
+<!-- Scripts externos necesarios para el funcionamiento de Bootstrap -->
 <script crossorigin="anonymous" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-<script src="/src/js/main.js"></script>
+<script src="/src/js/main.js"></script> <!-- Script personalizado -->
 </body>
 </html>
