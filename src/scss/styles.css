@@ -13181,7 +13181,7 @@ footer p {
   border-radius: 2.5rem;
   position: fixed;
   top: 6rem;
-  right: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13198,7 +13198,7 @@ footer p {
 }
 
 .oferta p {
-  font-size: x-small;
+  font-size: medium;
   margin: 0;
 }
 
@@ -13254,15 +13254,15 @@ footer p {
   position: fixed;
   color: #ffffff;
   font-size: 1rem;
-  top: 6.8rem;
+  top: 5rem;
   text-align: center;
-  z-index: 5;
+  z-index: 1050;
   background: darkred;
   width: 2rem;
   height: 2rem;
   line-height: 2rem;
   border-radius: 50%;
-  right: 0;
+  left: 0;
   cursor: pointer;
   -webkit-animation: oferta 1s 3S forwards;
           animation: oferta 1s 3S forwards;
