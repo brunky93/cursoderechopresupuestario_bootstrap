@@ -25,7 +25,9 @@ jobs:
           NEW_URL="${{ inputs.new_url }}"
 
           if [ -n "$OLD_URL" ]; then
-            sed -i "s|$OLD_URL|$NEW_URL|g" index.html
+            ESCAPED_OLD_URL=$(printf '%s\n' "$OLD_URL" | sed 's/[&/]/\\&/g')
+            ESCAPED_NEW_URL=$(printf '%s\n' "$NEW_URL" | sed 's/[&/]/\\&/g')
+            sed -i "s|$ESCAPED_OLD_URL|$ESCAPED_NEW_URL|g" index.html
             echo "URL actualizada correctamente."
           else
             echo "No se encontró una URL anterior con el patrón esperado."
