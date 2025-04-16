@@ -17,16 +17,18 @@ jobs:
 
       - name: Reemplazar URL en archivo
         run: |
-          echo "Reemplazando todas las URLs promocionales en index.html..."
+          echo "Reemplazando todas las URLs promocionales en index.html, videos.html y contacto.html..."
 
           NEW_URL="${{ inputs.new_url }}"
 
-          awk -v new_url="$NEW_URL" '
-            {
-              gsub(/https:\/\/www\.udemy\.com\/course\/derecho-presupuestario-orientado-a-oposiciones\/\?couponCode=[A-Za-z0-9]+/, new_url)
-              print
-            }
-          ' index.html > index.tmp && mv index.tmp index.html
+          for file in index.html videos.html contacto.html; do
+            awk -v new_url="$NEW_URL" '
+              {
+                gsub(/https:\/\/www\.udemy\.com\/course\/derecho-presupuestario-orientado-a-oposiciones\/\?couponCode=[A-Za-z0-9]+/, new_url)
+                print
+              }
+            ' "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
+          done
 
           echo "Todas las URLs actualizadas correctamente."
 
@@ -34,6 +36,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add index.html
+          git add index.html videos.html contacto.html
           git diff --cached --quiet || git commit -m "Actualizar URL promocional"
           git push
