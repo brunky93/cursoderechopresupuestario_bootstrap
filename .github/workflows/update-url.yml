@@ -1,0 +1,35 @@
+name: Update promo URL manually
+
+on:
+  workflow_dispatch:
+    inputs:
+      new_url:
+        description: 'Nueva URL promocional'
+        required: true
+        type: string
+
+jobs:
+  update-url:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Reemplazar URL en archivo
+        run: |
+          OLD_URL=$(grep -o 'https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[A-Z0-9]*' index.html || true)
+          NEW_URL="${{ inputs.new_url }}"
+          if [ -n "$OLD_URL" ]; then
+            sed -i "s|$OLD_URL|$NEW_URL|g" index.html
+          else
+            echo "No se encontró una URL anterior con el patrón esperado."
+            exit 1
+          fi
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Actualizar URL promocional"
+          git push
