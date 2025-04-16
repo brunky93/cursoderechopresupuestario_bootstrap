@@ -15,12 +15,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Mostrar contenido y detectar URL
+      - name: Reemplazar URL en archivo
         run: |
-          echo "------ Contenido detectado en index.html ------"
-          cat index.html
+          echo "Buscando URL anterior en index.html..."
 
-          echo "------ Buscando URL antigua ------"
           OLD_URL=$(grep -oE 'https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[^"]+' index.html || true)
 
           echo "OLD_URL encontrado: $OLD_URL"
@@ -28,6 +26,7 @@ jobs:
 
           if [ -n "$OLD_URL" ]; then
             sed -i "s|$OLD_URL|$NEW_URL|g" index.html
+            echo "URL actualizada correctamente."
           else
             echo "No se encontró una URL anterior con el patrón esperado."
             exit 1
