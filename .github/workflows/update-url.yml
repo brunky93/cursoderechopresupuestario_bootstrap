@@ -17,22 +17,14 @@ jobs:
 
       - name: Reemplazar URL en archivo
         run: |
-          echo "Buscando URL anterior en index.html..."
+          echo "Reemplazando todas las URLs promocionales en index.html..."
 
-          OLD_URL=$(grep -oE 'https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[^"]+' index.html || true)
-
-          echo "OLD_URL encontrado: $OLD_URL"
           NEW_URL="${{ inputs.new_url }}"
+          ESCAPED_NEW_URL=$(printf '%s\n' "$NEW_URL" | sed -e 's/[\/&|]/\\&/g')
 
-          if [ -n "$OLD_URL" ]; then
-            ESCAPED_OLD_URL=$(printf '%s\n' "$OLD_URL" | sed 's/[&/]/\\&/g')
-            ESCAPED_NEW_URL=$(printf '%s\n' "$NEW_URL" | sed 's/[&/]/\\&/g')
-            sed -i "s|$ESCAPED_OLD_URL|$ESCAPED_NEW_URL|g" index.html
-            echo "URL actualizada correctamente."
-          else
-            echo "No se encontró una URL anterior con el patrón esperado."
-            exit 1
-          fi
+          sed -i 's|https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[^"]*|'"$ESCAPED_NEW_URL"'|g' index.html
+
+          echo "Todas las URLs actualizadas correctamente."
 
       - name: Commit y push si hay cambios
         run: |
