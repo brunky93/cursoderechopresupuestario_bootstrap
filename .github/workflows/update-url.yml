@@ -17,7 +17,7 @@ jobs:
 
       - name: Reemplazar URL en archivo
         run: |
-          OLD_URL=$(grep -o 'https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[A-Z0-9]*' index.html || true)
+          OLD_URL=$(grep -o 'https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[^"\ ]*' index.html || true)
           NEW_URL="${{ inputs.new_url }}"
           if [ -n "$OLD_URL" ]; then
             sed -i "s|$OLD_URL|$NEW_URL|g" index.html
