@@ -17,8 +17,15 @@ jobs:
 
       - name: Reemplazar URL en archivo
         run: |
-          OLD_URL=$(grep -o 'https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[^"\ ]*' index.html || true)
+          echo "Contenido de index.html (primeras líneas):"
+          head -n 20 index.html
+
+          # Patrón de búsqueda
+          OLD_URL=$(grep -oE 'https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[^"]+' index.html || true)
+
+          echo "OLD_URL detectado: $OLD_URL"
           NEW_URL="${{ inputs.new_url }}"
+
           if [ -n "$OLD_URL" ]; then
             sed -i "s|$OLD_URL|$NEW_URL|g" index.html
           else
