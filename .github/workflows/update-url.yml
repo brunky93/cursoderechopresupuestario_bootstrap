@@ -20,9 +20,9 @@ jobs:
           echo "Reemplazando todas las URLs promocionales en index.html..."
 
           NEW_URL="${{ inputs.new_url }}"
-          ESCAPED_NEW_URL=$(printf '%s\n' "$NEW_URL" | sed -e 's/[\/&|]/\\&/g')
+          ESCAPED_NEW_URL=$(printf '%s\n' "$NEW_URL" | sed 's/[&@]/\\&/g')
 
-          sed -i 's|https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[^"]*|'"$ESCAPED_NEW_URL"'|g' index.html
+          sed -i "s@https://www\.udemy\.com/course/derecho-presupuestario-orientado-a-oposiciones/\?couponCode=[^\"']*@${ESCAPED_NEW_URL}@g" index.html
 
           echo "Todas las URLs actualizadas correctamente."
 
