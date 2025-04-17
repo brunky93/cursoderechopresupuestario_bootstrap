@@ -1,4 +1,4 @@
-name: Update promo URL manually
+name: Update URL
 
 on:
   workflow_dispatch:
