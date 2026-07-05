@@ -20,10 +20,18 @@
 <!-- Contenedor principal de la oferta -->
 <div>
 <input id="cerrar" type="checkbox"/> <!-- Checkbox para controlar la visibilidad del contenedor -->
-<label for="cerrar" id="btn-cerrar">X</label> <!-- Botón para cerrar la oferta -->
-<div class="oferta">
-<div class="contenido card">
-<div class="card-body">
+<label for="cerrar" id="btn-cerrar" style="z-index: 2001;">X</label> <!-- Botón para cerrar la oferta -->
+<div class="oferta" style="z-index: 2000;">
+<div class="contenido card border-0 shadow" style="background: linear-gradient(135deg, #ffc107 0%, #ffdd57 100%); border-radius: .75rem; max-width: 420px; margin: 0 auto;">
+<div class="card-body text-center py-2 px-3">
+<!-- Enlace a la oferta con descuento -->
+<p class="mb-1 fw-bold text-dark">65% de descuento en el curso online</p>
+<p class="mb-2 text-dark small">Oferta por tiempo limitado.</p>
+<a class="btn btn-dark btn-sm" href="https://www.udemy.com/course/derecho-presupuestario-orientado-a-oposiciones/?couponCode=7EBCC842C39851AD587F" target="_blank" rel="noopener noreferrer">Inscribirse con descuento</a>
+</div>
+</div>
+</div>
+</div>
 <!-- Enlace a la oferta con descuento -->
 <p><a href="https://www.udemy.com/course/derecho-presupuestario-orientado-a-oposiciones/?couponCode=7EBCC842C39851AD587F" target="_blank">Inscríbete ahora con un descuento del 65% ¡oferta por tiempo limitado!</a></p>
 </div>
@@ -61,10 +69,8 @@
 <li class="nav-item dropdown">
     <a aria-expanded="false" class="nav-link dropdown-toggle show-on-hover" href="material.html" role="button">Material didáctico</a>
     <!-- Submenú desplegable con enlaces a diferentes secciones -->
-<ul class="dropdown-menu bg-info">
-    <li>    <li><a class="dropdown-item text-wrap" href="books/1.manual de conceptos basicos.html">Manual de conceptos básicos</a></li>
-    <li>    <li><a class="dropdown-item text-wrap" href="books/2.introducciones.html">Introducciones</a></li>
-    <li>    <li><a class="dropdown-item text-wrap" href="books/3.supuestos.html">Supuestos prácticos</a></li>
+    <ul class="dropdown-menu bg-info">
+        <li><a class="dropdown-item text-wrap" href="material.html">10 libros</a></li>
     </ul>
 </li>
 <li class="nav-item">
